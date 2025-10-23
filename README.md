@@ -1,2 +1,9 @@
-# Python_Scrolling_SELF_STDUY
-노마드코더 강의
+# 목차
+
+* [INTRODUCTION](./1_introduction.md)
+* [VARIABLES AND FUNCTIONS](./2_변수_함수.md)
+* CONTROL FLOW
+* DATA STRUCTURES
+* OOP
+* JOB SCRAPER
+* BUILD A WEBSITE WITH FALSH
