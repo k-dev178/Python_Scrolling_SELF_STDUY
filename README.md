@@ -1,8 +1,8 @@
 # 목차
 
 * [INTRODUCTION](./1_introduction.md)
-* [VARIABLES AND FUNCTIONS](./2_변수_함수.md)
-* CONTROL FLOW
+* [VARIABLES AND FUNCTIONS](./2_변수_함수.md) 🚧
+* [CONTROL FLOW](./3_제어흐름.md)
 * DATA STRUCTURES
 * OOP
 * JOB SCRAPER
