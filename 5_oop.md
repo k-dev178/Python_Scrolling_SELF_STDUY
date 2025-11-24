@@ -104,3 +104,36 @@ print(a)
 ---
 
 # Inheritance(상속)
+## 같은 클래스 다른 메소드
+```py
+class Puppy:
+    def __init__(self,name,breed):
+      self.name = name
+      self.age = 0.1
+      self.breed
+    def woof_woof(self):
+      print("woof woof)
+    def introduce(self):
+      woof_woof()
+      print(f"My name is {self.name}.")
+      woof_woof()
+```
+
+introduce 안에 woof_woof를 넣어서 쓸 수 있음.
+
+## 다른클래스
+```py
+class Dog:
+    def __init__(self,name,age,breed):
+        self.name = name
+        self.age = age
+        self.breed
+
+class GuardDog(Dog):
+    def __init__(self,name,breed):
+        super().__init__(name,1,breed)
+
+class puppy(Dog):
+    def __init__(self,name,breed):
+        super().__init__(name,0.1,breed)
+```
