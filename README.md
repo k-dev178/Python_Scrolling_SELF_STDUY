@@ -7,3 +7,7 @@
 * [OOP](./5_oop.md)
 * JOB SCRAPER
 * BUILD A WEBSITE WITH FALSH
+
+---
+
+코드 챌린지 실습파일 링크: [바로가기](https://github.com/k-dev178/Python_Scrolling_BluePrints)
