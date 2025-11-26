@@ -10,4 +10,4 @@
 
 ---
 
-코드 챌린지 실습파일 링크: [바로가기](https://github.com/k-dev178/Python_Scrolling_BluePrints)
+코드 챌린지 실습파일 링크: [바로가기](https://github.com/k-dev178/Python_Scrolling_BluePrints)(챌린지 정책상 비공개)
