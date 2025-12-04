@@ -130,3 +130,10 @@ content = page.content()
 
 soup = BeautifulSoup(content, "html.parser")
 ```
+
+## a태그의 href url 가져오기.
+```py
+link = f"https://www.wanted.co.kr/{job.find('a')['href']}"
+```
+
+# 3. 엑셀
