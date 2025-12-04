@@ -89,3 +89,44 @@ print(f"jobs: {len(all_jobs)}")
 ```
 
 # 2. 동적 페이지 크롤링
+
+## 기본구조
+```py
+from playwright.sync_api import sync_playwright
+
+p = sync_playwright().start()
+
+browser = p.chromium.launch(headless=True) # False: 브라우저 보기, True : 브라우저 안보기
+
+page = browser.new_page()
+page.goto("https://google.com")
+
+page.screenshot(path="a.png")
+```
+
+## 클릭
+```html
+<button id="btn"></button>
+<div class="btns"></div>
+```
+```py
+page.click("button#btn")
+page.click("div.btns")
+```
+
+## 글자 채우기
+```py
+page.get_by_placeholder("flutter")
+```
+
+## 키보드 누르기
+```py
+page.keyboard.down("End")
+```
+
+## 페이지 반환
+```py
+content = page.content()
+
+soup = BeautifulSoup(content, "html.parser")
+```
