@@ -9,22 +9,8 @@ browser = p.chromium.launch(headless=False) # False: 브라우저 보기, True :
 
 page = browser.new_page()
 page.goto("https://www.wanted.co.kr/search?query=flutter&tab=position")
-# time.sleep(1)
 
-# # 페이지 조작
-# page.click("button.Aside_searchButton__Ib5Dn")
-# time.sleep(1)
-
-# page.get_by_placeholder("검색어를 입력해 주세요.").fill("flutter")
-# time.sleep(1)
-
-# page.keyboard.down("Enter")
-# time.sleep(1)
-
-# page.click("a#search_tab_position")
-# time.sleep(1)
-
-for i in range(5):
+for i in range(3):
     page.keyboard.down("End")
     time.sleep(2)
 
@@ -54,4 +40,9 @@ for job in jobs:
 
     jobs_db.append(job)
 
-print(len(jobs_db))
+file = open("./project/ToExcel.py/jobs.csv", 'w' ,encoding="utf-8")
+w = csv.writer(file) # w = writer
+w.writerow(["link", "title", "company", "reward"])
+
+for job in jobs_db:
+    w.writerow(job.values())
