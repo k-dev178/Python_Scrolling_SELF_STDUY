@@ -25,6 +25,12 @@ response.content는 requests로 받아온 HTML 내용임.
 "html.parser"는 HTML을 분석하겠다는 뜻.
 
 ## 1.3. find, find_all
+find는 html 요소 하나를 반환.
+find_all은 요소들을 리스트로 반환.
+
+그래서 find는 id또는 class가 하나만 있거나, 하나만 크롤링 하고싶을때 사용.
+find_all는 class를 모두 긁어 오고 싶을때 사용.
+
 * class 크롤링
 ```py
 title = soup.find_all(class_="bjs-jlid__h")
@@ -39,3 +45,47 @@ title = soup.find_all("div", id="btn") # div를 붙여서 크롤링 범위를 �
 ```
 
 ## 1.4. 페이지가 나뉘어있는 경우
+보통 get방식 페이지들은, url에 페이지 번호를 나타냄.
+
+> 예시)
+> 
+> https://weworkremotely.com/remote-full-time-jobs?page=2
+
+저걸 가지고 크롤링 가능.
+
+```py
+all_jobs = []
+
+def scrape_url(url):
+    print(f"scraping {url}...")
+    res = requests.get(url)
+    html = res.text
+    soup = BeautifulSoup(html, "html.parser")
+
+    title = soup.find_all(class_="title")
+    company = soup.find_all(class_="company")
+    description = soup.find_all(class_="description")
+
+    data = {
+        "title" : title,
+        "company" : company,
+        "description" : description
+    }
+
+    all_jobs.append(data)
+    
+
+res = requests.get(url)
+html = res.text
+soup = BeautifulSoup(html, "html.parser")
+
+buttons = len(soup.find_all(class_="page-numbers")) - 1
+
+for i in range(buttons):
+    url = f"https://weworkremotely.com/remote-full-time-jobs?page={i+1}"
+    scrape_url(url)
+
+print(f"jobs: {len(all_jobs)}")
+```
+
+# 2. 동적 페이지 크롤링
