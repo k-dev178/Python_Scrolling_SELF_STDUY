@@ -5,8 +5,8 @@
 * [CONTROL FLOW](./3_제어흐름.md)
 * [DATA STRUCTURES](./4_자료구조.md)
 * [OOP](./5_oop.md)
-* JOB SCRAPER
-* BUILD A WEBSITE WITH FALSH
+* [JOB SCRAPER](./6_jobScraper.md)
+* [BUILD A WEBSITE WITH FALSH](./7_build_website.md)
 
 ---
 
