@@ -101,6 +101,6 @@ def search():
 ```
 
 ## 3.2. 설명
-1. 버튼을 누르면 액션.
+1. from에 "python"을 입력후 버튼을 누르면 액션.
 2. 플래스크.py로 이동. 
-3. "/search" 찾은 후, render_template에 의해 "search.html"로 이동.
+3. "/search" 찾은 후, render_template에 의해 "search.html"(http://127.0.0.1:8080/search?keyword="python")로 이동.
