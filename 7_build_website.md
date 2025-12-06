@@ -1,10 +1,10 @@
-# flask 설치방법
-## 기본 설치
+# 0. flask 설치방법
+## 0.1. 기본 설치
 ```bash
 pip install flask
 ```
 
-## 가상환경에서 설치
+## 0.2. 가상환경에서 설치
 ```bash
 # 가상환경 생성
 python -m venv .venv
@@ -19,15 +19,15 @@ source .venv/bin/activate
 pip install flask
 ```
 
-## 실행
+## 0.3. 실행
 ```bash
 .venv/bin/python3 main.py
 ```
 
 ---
 
-# flask 기본적인 코드
-## 코드
+# 1. flask 기본적인 코드
+## 1.1. 코드
 ```py
 from flask import Flask
 
@@ -39,7 +39,7 @@ def main():
 
 app.run("0.0.0.0", port=8080)
 ```
-## 설명
+## 1.2. 설명
 "0.0.0.0"이 기본. port는 8080추천.
 
 @app.route("/")에서 "/"은 경로를 말함.<br>
@@ -47,10 +47,10 @@ app.run("0.0.0.0", port=8080)
 
 ---
 
-# render_template
-"<h1>Hello World</h1>" 대신 복잡한 html 코드를 반환시킬 수도 있음.
+# 2. render_template
+```<h1>Hello World</h1>``` 대신 복잡한 html 코드를 반환시킬 수도 있음.
 
-## 코드
+## 2.1. 코드
 ```py
 from flask import render_template
 
@@ -66,13 +66,13 @@ def main():
     <h4>My name is {{name}}</h4>
 </body>
 ```
-## 설명
+## 2.2. 설명
 html 경로 뒤에 name = "ksj"처럼 변수를 만들어서 html에게 전달 가능.
 
 ---
 
-# from action
-## 코드
+# 3. from action
+## 3.1. 코드
 ```html
 /* templates/home.html */
 
@@ -99,6 +99,8 @@ def search():
     <h1>Search Results</h1>
 </body>
 ```
+
+## 3.2. 설명
 1. 버튼을 누르면 액션.
 2. 플래스크.py로 이동. 
 3. "/search" 찾은 후, render_template에 의해 "search.html"로 이동.
