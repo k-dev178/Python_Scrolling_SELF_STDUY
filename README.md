@@ -1,12 +1,12 @@
 # 목차
 
-* [INTRODUCTION](./1_introduction.md)
-* [VARIABLES AND FUNCTIONS](./2_변수_함수.md) 🚧
-* [CONTROL FLOW](./3_제어흐름.md)
-* [DATA STRUCTURES](./4_자료구조.md)
-* [OOP](./5_oop.md)
-* [JOB SCRAPER](./6_jobScraper.md)
-* [BUILD A WEBSITE WITH FALSH](./7_build_website.md)
+* [INTRODUCTION](./markdown/1_introduction.md)
+* [VARIABLES AND FUNCTIONS](./markdown/2_변수_함수.md) 🚧
+* [CONTROL FLOW](./markdown/3_제어흐름.md)
+* [DATA STRUCTURES](./markdown/4_자료구조.md)
+* [OOP](./markdown/5_oop.md)
+* [JOB SCRAPER](./markdown/6_jobScraper.md)
+* [BUILD A WEBSITE WITH FALSH](./markdown/7_build_website.md)
 
 ---
 
